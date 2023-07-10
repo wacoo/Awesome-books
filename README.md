@@ -58,7 +58,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-**Awesome Books** An online catalog that allows users store books and their authors. 
+**Awesome Books** An online catalog that allows users store books and their authors. With the system they will able to add,remove and show books.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
