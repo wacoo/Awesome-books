@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-parent {
+  width: 300px;
+  padding: 12px 0;
+  border-bottom: black solid 2px;
+}
+
+#frm_books {
+  margin-top: 12px;
+}

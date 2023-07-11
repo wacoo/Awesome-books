@@ -17,16 +17,10 @@ function restoreBooks() {
 function displayData(k) {
   const bookParent = document.createElement('div');
   bookParent.classList.add(`parent-${k}`);
+  bookParent.classList.add('book-parent');
   bookParent.innerHTML += catalog[k].title;
   bookParent.innerHTML = `${bookParent.innerHTML}<br>${catalog[k].author}`;
   bookParent.innerHTML = `${bookParent.innerHTML}<br> <button id="${k}"> Remove </button>`;
-
-  form.style.marginTop = '12px';
-
-  bookParent.style.borderBottom = 'black solid 2px';
-  bookParent.style.paddingTop = '12px';
-  bookParent.style.paddingBottom = '12px';
-  bookParent.style.width = '300px';
   display.appendChild(bookParent);
   saveBooks(catalog);
 }
