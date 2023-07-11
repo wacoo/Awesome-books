@@ -9,6 +9,7 @@ body {
   background-color: lightgray;
   padding: 24px;
   margin: 12px;
+  border: black solid 2px;
   border-radius: 10px;
 }
 
@@ -16,5 +17,6 @@ body {
   margin-top: 12px;
   background-color: lightgray;
   padding: 24px;
+  border: black solid 2px;
   border-radius: 10px;
 }
