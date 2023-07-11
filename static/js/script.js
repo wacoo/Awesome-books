@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 const form = document.getElementById('frm_books');
 const display = document.getElementById('display');
 
@@ -6,7 +7,6 @@ function saveBooks(data) {
   localStorage.setItem('data', strData);
 }
 
-//Classes
 class Book {
   constactor(title, author) {
     this.title = title;
