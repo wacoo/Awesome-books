@@ -8,8 +8,14 @@ body {
   width: 300px;
   padding: 12px 0;
   border-bottom: black solid 2px;
+  background-color: lightgray;
+  padding: 24px;
+  border-radius: 10px;
 }
 
 #frm_books {
   margin-top: 12px;
+  background-color: lightgray;
+  padding: 24px;
+  border-radius: 10px;
 }
