@@ -6,7 +6,21 @@ function saveBooks(data) {
   localStorage.setItem('data', strData);
 }
 
-let catalog = {};
+//Classes
+class Book {
+  constactor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
+class Catalog {
+  constructor(book) {
+    this.book = book;
+  }
+}
+
+let catalog = new Catalog();
 
 function restoreBooks() {
   const data = localStorage.getItem('data');
@@ -19,8 +33,8 @@ function displayData(k) {
   bookParent.classList.add(`parent-${k}`);
   bookParent.classList.add('book-parent');
   bookParent.innerHTML += catalog[k].title;
-  bookParent.innerHTML = `${bookParent.innerHTML}<br>${catalog[k].author}`;
-  bookParent.innerHTML = `${bookParent.innerHTML}<br> <button id="${k}"> Remove </button>`;
+  bookParent.innerHTML = `${bookParent.innerHTML} by ${catalog[k].author}`;
+  bookParent.innerHTML = `${bookParent.innerHTML}<button class="button" id="${k}"> Remove </button>`;
   display.appendChild(bookParent);
   saveBooks(catalog);
 }
@@ -41,7 +55,7 @@ function removeBook(a) {
 let i = 0;
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const book = {};
+  const book = new Book();
   book.title = form.elements.title.value;
   book.author = form.elements.author.value;
   form.elements.title.value = '';
