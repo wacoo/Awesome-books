@@ -6,10 +6,9 @@ body {
 
 .book-parent {
   width: 300px;
-  padding: 12px 0;
-  border-bottom: black solid 2px;
   background-color: lightgray;
   padding: 24px;
+  margin: 12px;
   border-radius: 10px;
 }
 
