@@ -41,3 +41,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+h1 {
+  width: 500px;
+  padding: 24px;
+  background-color: gray;
+  text-align: center;
+  border: black solid 2px;
+  border-radius: 10px;
+  color: #fff;
+}
