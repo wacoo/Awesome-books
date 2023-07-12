@@ -5,7 +5,9 @@ body {
 }
 
 .book-parent {
-  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
   background-color: lightgray;
   padding: 24px;
   margin: 12px;
@@ -13,10 +15,38 @@ body {
   border-radius: 10px;
 }
 
-#frm_books {
-  margin-top: 12px;
+.frm_wrapper {
+  width: 500px;
+  display: flex;
+  justify-content: center;
   background-color: lightgray;
   padding: 24px;
   border: black solid 2px;
   border-radius: 10px;
+  margin: 12px;
+}
+
+#frm_books {
+  width: 205px;
+  background-color: lightgray;
+}
+
+.button {
+  margin-left: 24px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  width: 500px;
+  padding: 24px;
+  background-color: gray;
+  text-align: center;
+  border: black solid 2px;
+  border-radius: 10px;
+  color: #fff;
 }

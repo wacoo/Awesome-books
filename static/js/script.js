@@ -1,62 +1,100 @@
+/* eslint-disable max-classes-per-file */
 const form = document.getElementById('frm_books');
 const display = document.getElementById('display');
+let catalog = null;
+let i = 0;
 
-function saveBooks(data) {
-  const strData = JSON.stringify(data);
-  localStorage.setItem('data', strData);
+class Book {
+  constructor(id, title, author) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+  }
 }
 
-let catalog = {};
+class Catalog {
+  constructor() {
+    this.books = [];
+  }
 
-function restoreBooks() {
-  const data = localStorage.getItem('data');
-  const objData = JSON.parse(data);
-  catalog = objData || {};
-}
+  addBook(book) {
+    this.books.push(book);
+  }
 
-function displayData(k) {
-  const bookParent = document.createElement('div');
-  bookParent.classList.add(`parent-${k}`);
-  bookParent.classList.add('book-parent');
-  bookParent.innerHTML += catalog[k].title;
-  bookParent.innerHTML = `${bookParent.innerHTML}<br>${catalog[k].author}`;
-  bookParent.innerHTML = `${bookParent.innerHTML}<br> <button id="${k}"> Remove </button>`;
-  display.appendChild(bookParent);
-  saveBooks(catalog);
-}
+  removeBook(bId) {
+    this.books = this.books.filter((book) => book.id !== bId);
+  }
 
-function removeBook(a) {
-  const remove = document.getElementById(a);
-  if (remove) {
-    remove.addEventListener('click', function removeContent(event) {
-      const button = event.target;
-      const parent = button.parentNode;
-      parent.parentNode.removeChild(parent);
-      delete catalog[this.id];
-      saveBooks(catalog);
+  addRemoveListener(idx) {
+    const remove = document.getElementById(idx);
+    if (remove) {
+      remove.addEventListener('click', (event) => {
+        const button = event.target;
+        const parent = button.parentNode;
+        parent.parentNode.removeChild(parent);
+        this.removeBook(idx);
+        this.saveBooks();
+        if (i > 0) {
+          i -= 1;
+        }
+      });
+    }
+  }
+
+  showAll() {
+    return this.books;
+  }
+
+  displayData(idx) {
+    const bookParent = document.createElement('div');
+    bookParent.classList.add(`parent-${idx}`);
+    bookParent.classList.add('book-parent');
+    bookParent.innerHTML += this.books[idx].title;
+    bookParent.innerHTML = `${bookParent.innerHTML} by ${this.books[idx].author}`;
+    bookParent.innerHTML = `${bookParent.innerHTML}<button class="button" id="${idx}"> Remove </button>`;
+    display.appendChild(bookParent);
+    this.addRemoveListener(idx);
+  }
+
+  getDataForm() {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const book = new Book();
+      book.id = i;
+      book.title = form.elements.title.value;
+      book.author = form.elements.author.value;
+      form.elements.title.value = '';
+      form.elements.author.value = '';
+      catalog.addBook(book);
+      this.displayData(i);
+      this.saveBooks();
+      i += 1;
     });
   }
+
+  saveBooks() {
+    const strData = JSON.stringify(this.books);
+    localStorage.setItem('data', strData);
+  }
+
+  restoreBooks() {
+    let data = localStorage.getItem('data');
+    if (!data) {
+      data = {};
+    } else {
+      const objData = JSON.parse(data);
+      this.books = objData;
+    }
+  }
+
+  displayStorage() {
+    for (let i = 0; i < this.books.length; i += 1) {
+      this.displayData(i);
+    }
+  }
 }
 
-let i = 0;
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const book = {};
-  book.title = form.elements.title.value;
-  book.author = form.elements.author.value;
-  form.elements.title.value = '';
-  form.elements.author.value = '';
-  catalog[i] = book;
-  displayData(i);
-  removeBook(i);
-  i += 1;
-});
-
-window.addEventListener('load', () => {
-  restoreBooks();
-  const keys = Object.keys(catalog);
-  for (let i = 0; i < keys.length; i += 1) {
-    displayData(keys[i]);
-    removeBook(keys[i]);
-  }
-});
+catalog = new Catalog();
+catalog.getDataForm();
+catalog.restoreBooks();
+catalog.displayStorage();
