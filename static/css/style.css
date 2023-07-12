@@ -1,4 +1,73 @@
-body {
+
+.nav {
+  width: calc(100% - 24px);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: lightgray;
+  border: black solid 2px;
+}
+
+h1 {
+  width: calc(100% - 48px);
+  margin: 12px 12px 40px 12px;
+  padding: 24px;
+  background-color: gray;
+  text-align: center;
+  border: black solid 2px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.nav h1 {
+  width: 400px;
+  color: black;
+  border: 0;
+  background-color: lightgrey;
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: left;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav li {
+  color: #fff;
+  background-color: gray;
+  border: #fff solid 1px;
+  padding: 12px;
+  margin: 5px 10px;
+  border-radius: 5px;
+}
+
+.wrapper_contact li {
+  margin-left: 30px;
+}
+
+.nav li:hover {
+  background-color: #fff;
+  border: gray solid 1px;
+  color: gray;
+}
+
+.nav li:focus {
+  background-color: black;
+  border: #fff solid 1px;
+  color: #fff;
+}
+
+.nav li:active {
+  background-color: black;
+  border: #fff solid 1px;
+  color: #fff;
+}
+
+.p_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +76,6 @@ body {
 .book-parent {
   display: flex;
   justify-content: space-between;
-  width: 500px;
   background-color: lightgray;
   padding: 24px;
   margin: 12px;
@@ -15,15 +83,26 @@ body {
   border-radius: 10px;
 }
 
-.frm_wrapper {
-  width: 500px;
+.wrapper_frm,
+.wrapper_list,
+.wrapper_contact {
+  width: 800px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: lightgray;
   padding: 24px;
   border: black solid 2px;
   border-radius: 10px;
   margin: 12px;
+}
+
+.wrapper_list {
+  background-color: #fff;
+}
+
+.wrapper_contact p {
+  text-align: left;
 }
 
 #frm_books {
@@ -33,20 +112,4 @@ body {
 
 .button {
   margin-left: 24px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1 {
-  width: 500px;
-  padding: 24px;
-  background-color: gray;
-  text-align: center;
-  border: black solid 2px;
-  border-radius: 10px;
-  color: #fff;
 }

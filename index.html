@@ -9,22 +9,50 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1>Awesome books</h1>
-        <div id="display"></div>
-        <div class="frm_wrapper">
-            <form action="" id="frm_books">
-            <input type="text" id="title" name="title" placeholder="Title">
-            <br><br>
-            <input type="text" id="author" name="author" placeholder="Author">
-            <br><br>
-            <button type="submit">Add</button>
-        </form>
+    <header class="header">
+        <nav class="nav">
+            <h1>Awesome Books</h1>
+            <ul>
+                <li id="btn_list">List</li>
+                <li id="btn_add">Add new</li>
+                <li id="btn_contact">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="p_wrapper">
+        <div class="wrapper">
+            <div class="wrapper_frm">
+                <h1>Add a new book</h1>
+                <form action="" id="frm_books">
+                    <input type="text" id="title" name="title" placeholder="Title">
+                    <br><br>
+                    <input type="text" id="author" name="author" placeholder="Author">
+                    <br><br>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+            <div class="wrapper_list">
+                <h1>All awesome books</h1>
+                <div id="display"></div>
+            </div>
+            <div class="wrapper_contact">
+                <div class="par_wrapper">
+                    <h1>Contact information</h1>
+                    <p>Do you have any question or you just want to say "Hello"?</p>
+                    <p>You can reach out to us!</p>
+                    <ul>
+                        <li>Our email: wabaham9@gmail.com</li>
+                        <li>Our phone number: +251-9-20-71-28-50</li>
+                        <li>Our address: Balders Street, B07/29, Addis Ababa, Ethiopia</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <script src="static/js/script.js"></script>
+            <script src="static/js/nav.js"></script>
         </div>
-        
-        <script src="static/js/script.js"></script>
-    </div>
-
+    </section>
 </body>
-
 </html>
