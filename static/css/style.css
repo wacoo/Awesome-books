@@ -12,13 +12,17 @@
 
 h1 {
   width: calc(100% - 48px);
-  margin: 12px 12px 40px 12px;
+  margin: 12px 0 40px 0;
   padding: 24px;
   background-color: gray;
   text-align: center;
   border: black solid 2px;
   border-radius: 10px;
   color: #fff;
+}
+
+.wrapper_contact {
+  width: 100vw;
 }
 
 .nav h1 {
@@ -73,12 +77,17 @@ h1 {
   align-items: center;
 }
 
+.p_wrapper p,
+.p_wrapper ul {
+  margin: 0 48px;
+}
+
 .book-parent {
   display: flex;
   justify-content: space-between;
   background-color: lightgray;
   padding: 24px;
-  margin: 12px;
+  margin: 12px 48px;
   border: black solid 2px;
   border-radius: 10px;
 }
@@ -105,9 +114,14 @@ h1 {
   text-align: left;
 }
 
+.par_wrapper {
+  width: 100%;
+}
+
 #frm_books {
   width: 205px;
   background-color: lightgray;
+  outline: red 2px;
 }
 
 .button {
@@ -125,4 +139,10 @@ li.active {
   flex-direction: column;
   align-items: center;
   margin-top: 24px;
+}
+
+.info {
+  color: green;
+  margin-top: 10px;
+  width: 205px;
 }

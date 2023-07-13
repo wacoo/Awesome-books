@@ -5,6 +5,7 @@ const contact = document.querySelector('.wrapper_contact');
 const btnList = document.getElementById('btn_list');
 const btnAdd = document.getElementById('btn_add');
 const btnContact = document.getElementById('btn_contact');
+const infoDisplay = document.querySelector('small');
 
 btnList.addEventListener('click', () => {
   add.style.display = 'none';
@@ -13,6 +14,7 @@ btnList.addEventListener('click', () => {
   btnAdd.classList.remove('active');
   btnList.classList.add('active');
   btnContact.classList.remove('active');
+  infoDisplay.innerHTML = '';
 });
 btnAdd.addEventListener('click', () => {
   add.style.display = 'flex';
@@ -21,6 +23,7 @@ btnAdd.addEventListener('click', () => {
   btnAdd.classList.add('active');
   btnList.classList.remove('active');
   btnContact.classList.remove('active');
+  infoDisplay.innerHTML = '';
 });
 btnContact.addEventListener('click', () => {
   add.style.display = 'none';
@@ -29,6 +32,7 @@ btnContact.addEventListener('click', () => {
   btnAdd.classList.remove('active');
   btnList.classList.remove('active');
   btnContact.classList.add('active');
+  infoDisplay.innerHTML = '';
 });
 
 function showDefaultTab() {
