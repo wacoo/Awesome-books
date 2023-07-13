@@ -53,6 +53,19 @@ h1 {
   margin-left: 30px;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.names {
+  font-style: italic;
+  color: rgba(0,0,0,0.4);
+  font-weight: 400;
+  font-size: 12px;
+}
+
 .nav li:hover {
   background-color: #fff;
   border: gray solid 1px;
