@@ -106,7 +106,18 @@ Example command:
 - Clone the repository to desired directory on local computer
 > `git clone https://github.com/wacoo/Awesome-Books.git`
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
+### Author
+- GitHub: [@wacoo](https://github.com/wacoo)
+- Twitter: [@wabaham9](https://twitter.com/wabaham9)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/wondmagegn-abriham-b867289a)
+
+### Author
+- GitHub: [@wacoo](https://github.com/wacoo)
+- Twitter: [@wabaham9](https://twitter.com/wabaham9)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/wondmagegn-abriham-b867289a)
+
+### Author
 - GitHub: [@wacoo](https://github.com/wacoo)
 - Twitter: [@wabaham9](https://twitter.com/wabaham9)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/wondmagegn-abriham-b867289a)

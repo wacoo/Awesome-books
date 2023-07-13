@@ -6,6 +6,7 @@ const btnList = document.getElementById('btn_list');
 const btnAdd = document.getElementById('btn_add');
 const btnContact = document.getElementById('btn_contact');
 const infoDisplay = document.querySelector('small');
+const displaDate = document.querySelector('.date_cls');
 
 btnList.addEventListener('click', () => {
   add.style.display = 'none';
@@ -35,6 +36,9 @@ btnContact.addEventListener('click', () => {
   infoDisplay.innerHTML = '';
 });
 
+let newDate = new Date();
+console.log(newDate);
+displaDate.innerHTML = newDate;
 function showDefaultTab() {
   add.style.display = 'none';
   list.style.display = 'block';
