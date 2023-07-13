@@ -36,8 +36,7 @@ btnContact.addEventListener('click', () => {
   infoDisplay.innerHTML = '';
 });
 
-let newDate = new Date();
-console.log(newDate);
+const newDate = new Date();
 displaDate.innerHTML = newDate;
 function showDefaultTab() {
   add.style.display = 'none';

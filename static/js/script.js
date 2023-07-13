@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
 const form = document.getElementById('frm_books');
 const display = document.getElementById('display');
+const infoDisplay = document.querySelector('small');
 
 let catalog = null;
 let i = 0;
@@ -95,7 +96,6 @@ class Catalog {
       this.displayData(i);
     }
   }
-
 }
 
 catalog = new Catalog();
