@@ -113,3 +113,9 @@ h1 {
 .button {
   margin-left: 24px;
 }
+
+li.active {
+  background-color: black;
+  border: #fff solid 1px;
+  color: #fff;
+}
