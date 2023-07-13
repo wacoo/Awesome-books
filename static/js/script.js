@@ -1,6 +1,8 @@
 /* eslint-disable max-classes-per-file */
 const form = document.getElementById('frm_books');
 const display = document.getElementById('display');
+const infoDisplayS = document.querySelector('small');
+
 let catalog = null;
 let i = 0;
 
@@ -68,6 +70,8 @@ class Catalog {
       catalog.addBook(book);
       this.displayData(i);
       this.saveBooks();
+      infoDisplayS.innerHTML = 'Book added successfully!';
+      infoDisplayS.classList.add('success');
       i += 1;
     });
   }
