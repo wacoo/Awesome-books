@@ -5,8 +5,8 @@ const contact = document.querySelector('.wrapper_contact');
 const btnList = document.getElementById('btn_list');
 const btnAdd = document.getElementById('btn_add');
 const btnContact = document.getElementById('btn_contact');
-const infoDisplay = document.querySelector('small');
 const displaDate = document.querySelector('.date_cls');
+const infoDisplay = document.querySelector('small');
 
 btnList.addEventListener('click', () => {
   add.style.display = 'none';
