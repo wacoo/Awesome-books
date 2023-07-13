@@ -119,3 +119,10 @@ li.active {
   border: #fff solid 1px;
   color: #fff;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
