@@ -77,7 +77,7 @@ Introducing **Awesome Books** - the ultimate web application for book lovers! Ou
 <!-- LIVE DEMO  -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Comming soon.
+- Click <a href="https://wacoo.github.io/Awesome-books/">here</a> to see the live demo.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Project Presentation <a name="presentation"></a>
