@@ -62,7 +62,7 @@ Introducing **Awesome Books** - the ultimate web application for book lovers! Ou
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-- HTML/JS
+- HTML/CSS/JS
 
 
 <!-- Features -->
