@@ -58,7 +58,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-**Awesome Books** An online catalog that allows users store books and their authors. With the system they will able to add,remove and show books.
+Introducing **Awesome Books** - the ultimate web application for book lovers! Our platform allows you to easily store and access information about your favorite books and their authors. With a user-friendly menu, you can quickly browse through lists of books and their corresponding authors. Whether you're searching for a new read or simply looking to organize your personal library, Awesome Books has got you covered. And that's not all - we also provide contact information for our friendly owners, so you can reach out with any questions or feedback. Join the community of book enthusiasts today and discover your next literary adventure with Awesome Books!
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
